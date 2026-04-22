@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import cv2 
 import cvzone
+import os
 from ultralytics import YOLO
 
 
@@ -25,7 +26,10 @@ frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = int(cap.get(cv2.CAP_PROP_FPS))
 
-out = cv2.VideoWriter(r".\detection\hasil_car_counter.mp4", cv2.VideoWriter_fourcc(*"mp4v"), fps , (frame_width,frame_height))
+output_dir = r'.\detection'
+output_file = os.path.join(output_dir, "hasil_car_counter.mp4")
+
+out = cv2.VideoWriter(output_file, cv2.VideoWriter_fourcc(*"mp4v"), fps , (frame_width,frame_height))
 
 
 car_count = 0
