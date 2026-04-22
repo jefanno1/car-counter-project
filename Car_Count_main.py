@@ -5,6 +5,14 @@ import cvzone
 import os
 from ultralytics import YOLO
 
+# ----------------------------
+# Check Dir
+# ----------------------------
+output_dir = r'.\detection'
+output_file = os.path.join(output_dir, "hasil_car_counter.mp4")
+model_dir = r'.\model'
+os.makedirs(output_dir, exist_ok=True)
+os.makedirs(model_dir, exist_ok=True)
 
 # ----------------------------
 # Define Model
@@ -16,7 +24,6 @@ model = YOLO(r".\model\yolov8n.pt")
 # Read Video using CV2
 # ----------------------------
 
-
 mask = cv2.imread(r".\mask.png")
 cap = cv2.VideoCapture(r".\source\cars.mp4")
 
@@ -26,10 +33,7 @@ frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = int(cap.get(cv2.CAP_PROP_FPS))
 
-output_dir = r'.\detection'
-output_file = os.path.join(output_dir, "hasil_car_counter.mp4")
 
-os.makedirs(output_dir, exist_ok=True)
 
 out = cv2.VideoWriter(output_file, cv2.VideoWriter_fourcc(*"mp4v"), fps , (frame_width,frame_height))
 
