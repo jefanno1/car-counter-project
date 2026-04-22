@@ -49,8 +49,8 @@ pip install -r requirements.txt
 
 Download model and video here -> https://drive.google.com/drive/folders/1-h1Pc9BjpofJWDAnZ-x_s85MxzyhlWnj?usp=drive_link
 
--> Create 'model' folder and put yolov8n.pt inside of it
--> Create 'source' folder and put cars.mp4 inside of it
+* Create 'model' folder and 'source' folder
+* put yolov8n.pt inside of 'model' and cars.mp4 inside of 'source'
 
 ---
 
