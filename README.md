@@ -110,6 +110,7 @@ This ensures that only vehicles crossing the defined coordinate plane increment 
 
 ## 📁Project Structure
 
+```markdown
 car-counter-project/
 │
 ├── detection/
@@ -123,7 +124,7 @@ car-counter-project/
 ├── mask.png
 ├── Car_Counter_main.py
 └── requirements.txt
-
+```
 ---
 
 ## 🙌 Acknowledgments
