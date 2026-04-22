@@ -29,6 +29,8 @@ fps = int(cap.get(cv2.CAP_PROP_FPS))
 output_dir = r'.\detection'
 output_file = os.path.join(output_dir, "hasil_car_counter.mp4")
 
+os.makedirs(output_dir, exist_ok=True)
+
 out = cv2.VideoWriter(output_file, cv2.VideoWriter_fourcc(*"mp4v"), fps , (frame_width,frame_height))
 
 
